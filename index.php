@@ -13,7 +13,7 @@ if ($_GET['action'] == 'qr')
 {
 	echo $ga->getQRCodeGoogleUrl($_GET['key'],$_GET['name']);
 }
-if ($_GET['action'] == 'gecode')
+if ($_GET['action'] == 'getcode')
 {
 	echo $ga->getCode($_GET['key']);
 }
