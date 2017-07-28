@@ -6,7 +6,7 @@ $ga = new PHPGangsta_GoogleAuthenticator();
 if ($_GET['action'] == 'create')
 {
 	$json['key'] = $secret = $ga->createSecret();
-	$json['qr'] = $ga->getQRCodeGoogleUrl($json['key'],$_GET['name']);
+	$json['qr'] = $ga->getQRCodeGoogleUrl($_GET['name'],$json['key']);
 	echo json_encode($json);
 }
 if ($_GET['action'] == 'qr')
